@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+  <title>Continuous Animation Example</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // [START script_body]
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart () {
+
+      var data = google.visualization.arrayToDataTable([
+          ['ID', 'X', 'Y','Top', 'Room Nights'],
+          ['Malaysia',1,1,1,2000],
+          ['Singapore',2,1,2,256],
+          ['Other Africa',3,1,3,241],
+          ['Saudi Arabia',4,1,4,240],
+          ['India',5,1,5,194],
+        ]);
+
+      var options = {
+        title: "Consumer Day Use",
+        colorAxis: {colors: ['#3f51b5', '#f50057']},
+        sizeAxis: {minValue: 0,  maxSize: 50},
+        animation: {
+          duration: 1000,
+          easing: 'linear',
+          startup: true
+        },
+        hAxis: { gridlines: {color: 'transparent'}, ticks: [0, 1, 2, 3, 4, 5, 6] },
+          vAxis: { gridlines: {color: 'transparent'}, ticks: [0, 1, 2]},
+        bubble: {
+                    textStyle: {
+                      fontSize: 14,
+                      color: '#212121',
+                      bold: false,
+                      italic: false,
+                      
+                    }}
+      };
+
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
+
+      google.visualization.events.addListener(chart, animate);
+
+      chart.draw(data, options);
+
+      function animate() {
+        var data = google.visualization.arrayToDataTable([
+          ['ID', 'X', 'Y','Top', 'Room Nights'],
+          ['one',   1,  1,  1,     18820],
+          ['two',   2,  1,  2,    13277],
+          ['three',   3,  1,  3,     10636],
+          ['four',   4,  1,  4,    6149],
+          ['five',   5,  1,  5,     3888],
+        ]);
+        
+
+        chart.draw(data, options);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
+
+
+    
+
+
+  
+    
+  </body>
+</html>
+

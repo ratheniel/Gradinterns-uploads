@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar Charts</title>
+    
+  
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,700|Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://google-developers.appspot.com/_static/e59e9bfa61/css/devsite-cyan.css">
+    <script src="https://google-developers.appspot.com/_static/e59e9bfa61/js/prettify-bundle.js"></script>
+  
+
+    <meta name="robots" content="noindex">
+    <script src="https://google-developers.appspot.com/_static/e59e9bfa61/js/jquery-bundle.js"></script>
+    <script src="https://google-developers.appspot.com/_static/e59e9bfa61/js/jquery_ui-bundle.js"></script>
+    <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
+    
+    <script src="https://google-developers.appspot.com/_static/e59e9bfa61/js/framebox.js"></script>
+  </head>
+  <body>
+<p style="display: none; height: 0; width: 0">This is a snippet from developers.google.com</p>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="calendar_basic" style="width: 1000px; height: 350px;"></div>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['calendar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'date', id: 'Date' });
+    dataTable.addColumn({ type: 'number', id: 'Attendance' });
+      dataTable.addColumn({type: 'string', role: 'tooltip'});
+    dataTable.addRows([
+      
+      [new Date(2017,0,17),1,'17, January 2017- Residence North Corridor'],
+[new Date(2017,0,27),1,'27, January 2017- Residence Pantry North'],
+[new Date(2017,1,7),1,'7, February 2017- Residence South Corridor'],
+[new Date(2017,1,20),1,'20, February 2017- Residence Parking area'],
+[new Date(2017,2,1),1,'1, March 2017- Hotel Corridor Touch up'],
+[new Date(2017,2,7),1,'7, March 2017- Hotel Pantry '],
+    ]);
+
+    var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+    var options = {
+      title: "SHKL Task Force Schedule",
+      tooltip: {isHtml: false},
+      height: 350,
+      noDataPattern: {
+        backgroundColor: 'fbbc05',
+        color: '#ea4335'
+      }
+    };
+
+    chart.draw(dataTable, options);
+  }
+</script>
+  </body>
+</html>
+

@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+                      google.charts.load('current', {'packages':['gantt']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function daysToMilliseconds(days) {
+        return days * 24 * 60 * 60 * 1000;
+      }
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Action By');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([ 
+              ['1', 'Critical Path: 6 Months before Opening and 3 Months After Opening', null, new Date(2015, 7, 1), new Date(2016, 3, 30), null, 0, null],
+['2', 'Recruitment / Appointment of DOSM', 'S&M Manpower Manning', new Date(2015, 7, 1), new Date(2015, 7, 30), null, 0, null],
+['3', 'Recruitment / Appointment of MARCOM Manager', 'S&M Manpower Manning', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['4', 'Recruitment / Appointment of Sales Team & Reservation Team', 'S&M Manpower Manning', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['5', 'Establish Sales & Marketing Organisation Structure', 'S&M Manpower Manning', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['6', 'Market Research - SWOT Analysis on own hotel & compset', 'Pre-Opening Preparation', new Date(2015, 7, 1), new Date(2015, 7, 30), null, 0, null],
+['7', 'Marcom - Corporate Identity Kit from SGI', 'Pre-Opening Preparation', new Date(2015, 7, 1), new Date(2015, 7, 30), null, 0, null],
+['8', 'Marcom - Roll out Corporate Website with individual link', 'Pre-Opening Preparation', new Date(2015, 7, 1), new Date(2015, 7, 30), null, 0, null],
+['9', 'Pre-Opening Business Plan and Budget', 'Pre-Opening Preparation', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['10', '2016 Rate Structure for Corporate, Govt, Wholesale Travel Trade & BAR ', 'Rate Structure', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['11', 'Develop Pre-Opening Offer / Packages.', 'Rate Structure', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['12', 'Implement all Sales & Marketing Policy & Procedures and SOPS', 'Policy & Procedures & SOPS', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['13', 'Training on SGI Best Practices', 'Policy & Procedures & SOPS', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['14', ' 1 - 5km radius sales blitz combing all streets/building/companies.                                                                                                                                                                               ', 'Corporate Segment', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['15', 'Identify Top 30 Corporate Account.', 'Corporate Segment', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['16', 'Database management for Corporate Mailing List - FMM Directory, MIA auditors etc.', 'Corporate Segment', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['17', 'Issuance of Corporate Rate Letters.', 'Corporate Segment', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['18', 'Courtesy Calls to State Tourism Office and State Government Menteri Besar Office.', 'Government/ GLC', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['19', 'To plan for Official Hotel Preview by State Government Official.', 'Government/ GLC', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['20', 'Sales Blitz to Putrajaya.', 'Government/ GLC', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['21', 'Issuance of Government Rate Letters.', 'Government/ GLC', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['22', 'RateGain - Training on Channel Manager', 'Travel Agent/ OTA', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['23', 'To sign up all the key OTAs, establish hotel fact sheets with images.', 'Travel Agent/ OTA', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['24', 'All OTAs should go live at least 2 months before Opening.', 'Travel Agent/ OTA', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['25', 'Sales Blitz to Travel Agencies.', 'Travel Agent/ OTA', new Date(2015, 9, 1), new Date(2015, 9, 30), null, 0, null],
+['26', 'Issuance of 2016/2017 Contract Rates to Travel Agencies.', 'Travel Agent/ OTA', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['27', 'Establish Tactical Opening Promo for Inbound Tour Program.', 'Travel Agent/ OTA', new Date(2015, 10, 1), new Date(2015, 10, 30), null, 0, null],
+['28', 'Personal & Email Invitation in conjunction of Soft Opening to Corporate Companies.', 'Trial Stay', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['29', 'Agent FAM Trip by geographical region/key source market - Singapore, China etc.', 'Trial Stay', new Date(2015, 11, 1), new Date(2015, 11, 30), null, 0, null],
+['30', 'Tourism Board, Airline, Media FAM Trip.', 'Trial Stay', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['31', 'Trial stay vouchers for All planned SGI Sales Trips.', 'Trial Stay', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['32', 'SGI Corporate Luncheons to present New Hotel.', 'Hosting to Present New Hotel', new Date(2015, 9, 1), new Date(2016, 3, 30), null, 0, null],
+['33', '"Hard Hat" Invitations & Hotel Inspections with refreshment.', 'Hosting to Present New Hotel', new Date(2015, 9, 1), new Date(2015, 11, 30), null, 0, null],
+['34', 'GM Evening Cocktail - invitation to hotel GMs within 10 KM radius ', 'Hosting to Present New Hotel', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['35', 'Opening Flyers Distribution at CIQ/Bus Terminal/Airport - Arrival Hall & Info Counter', 'Marketing Campaigns', new Date(2015, 11, 1), new Date(2016, 0, 30), null, 0, null],
+['36', 'Taxi Awareness Campaign', 'Marketing Campaigns', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['37', 'Joint Participation in Trade Fairs with SGI.', 'Marketing Campaigns', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['38', 'Joint Participation in MATTA Fair with SGI.', 'Marketing Campaigns', new Date(2015, 8, 1), new Date(2015, 8, 30), null, 0, null],
+['39', 'Joint Participation in Trade Fairs with SGI.', 'Marketing Campaigns', new Date(2016, 0, 1), new Date(2016, 0, 30), null, 0, null],
+['40', 'Joint Participation in Trade Fairs with SGI.', 'Marketing Campaigns', new Date(2016, 2, 1), new Date(2016, 2, 30), null, 0, null],
+['41', 'Joint Participation in MATTA Fair with SGI.', 'Marketing Campaigns', new Date(2016, 2, 1), new Date(2016, 2, 30), null, 0, null],                                  
+      ]);
+
+        var options = {
+          height: 2000,
+          width: 1545,
+          gantt: {
+            criticalPathEnabled: true,
+            criticalPathStyle: {
+              stroke: '#e64a19',
+              strokeWidth: 5
+            }
+          }
+        };
+
+        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+
+</script>
+  </head>
+  <body style="max-width:100%;">
+    <div style="font-size:2em; font-family:Roboto; font-weight:100; padding: 10px;"> Sales and Marketing Critical Path: 6 Months Before Opening and 3 Months after Opening Timeline </div>
+     <div id="chart_div" style="max-height: 100%; max-width: 100%; display: block; "></div>
+  </body>
+</html>

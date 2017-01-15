@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+  <title>Continuous Animation Example</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // [START script_body]
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart () {
+
+      var data = google.visualization.arrayToDataTable([
+         /*Paste data here*/
+          ['ID', 'X', 'Y','Top Listed', 'Revenue (RM)'],
+          ['ONLINE TRAVEL AGENT',1,6,1,404563],
+['AD HOC TOUR GROUPS',1,5,2,92659],
+['NEGOTIATED CORP',1,4,3,65520],
+['TOUR SERIES',1,3,4,36023],
+['CORP PACKAGES',1,2,5,19679],
+['GOVERNMENT',1,1,6,10337],
+['ONLINE TRAVEL AGENT ',2,6,1,332008],
+['AD HOC TOUR GROUPS',2,5,2,83595],
+['TOUR SERIES',2,4,3,63716],
+['GOVERNMENT',2,3,4,32073],
+['NEGOTIATED CORP',2,2,5,16775],
+['ASSOCIATED COMPANY STAFF DISC',2,1,6,4502],
+['ONLINE TRAVEL AGENT ',3,6,1,360515],
+['AD HOC TOUR GROUPS',3,5,2,196366],
+['TOUR SERIES',3,4,3,158190],
+['NEGOTIATED CORP',3,3,4,38147],
+['CORP PACKAGES',3,2,5,11729],
+['GOVERNMENT',3,1,6,7639],
+['ONLINE TRAVEL AGENT ',4,6,1,237455],
+['AD HOC TOUR GROUPS',4,5,2,168840],
+['NEGOTIATED CORP',4,4,3,41637],
+['TOUR SERIES',4,3,4,36518],
+['GOVERNMENT',4,2,5,8934],
+['CORP PACKAGES',4,1,6,8399],
+['ONLINE TRAVEL AGENT ',5,6,1,300651],
+['AD HOC TOUR GROUPS',5,5,2,127577],
+['NEGOTIATED CORP',5,4,3,38600],
+['TOUR SERIES',5,3,4,23248],
+['CORP PACKAGES',5,2,5,16171],
+['GOVERNMENT',5,1,6,9952],
+['ONLINE TRAVEL AGENT ',6,6,1,205072],
+['AD HOC TOUR GROUPS',6,5,2,45779],
+['NEGOTIATED CORP',6,4,3,34640],
+['TOUR SERIES',6,3,4,29017],
+['CORP PACKAGES',6,2,5,15590],
+['GOVERNMENT',6,1,6,14170],
+['ONLINE TRAVEL AGENT ',7,6,1,506086],
+['AD HOC TOUR GROUPS',7,5,2,117508],
+['TOUR SERIES',7,4,3,59259],
+['NEGOTIATED CORP',7,3,4,31952],
+['GOVERNMENT',7,2,5,9907],
+['CORP PACKAGES',7,1,6,7806],
+['ONLINE TRAVEL AGENT ',8,6,1,351507],
+['AD HOC TOUR GROUPS',8,5,2,221867],
+['TOUR SERIES',8,4,3,75850],
+['NEGOTIATED CORP',8,3,4,47543],
+['CORP PACKAGES',8,2,5,9829],
+['CONSUMER LONG TERM / LEASE',8,1,6,6072],
+['ONLINE TRAVEL AGENT ',9,6,1,479173],
+['AD HOC TOUR GROUPS',9,5,2,114486],
+['NEGOTIATED CORP',9,4,3,41113],
+['TOUR SERIES',9,3,4,32161],
+['GOVERNMENT',9,2,5,16259],
+['CORP PACKAGES',9,1,6,10598],
+['ONLINE TRAVEL AGENT ',10,6,1,398260],
+['AD HOC TOUR GROUPS',10,5,2,76552],
+['SPORTS EVENTS',10,4,3,60786],
+['NEGOTIATED CORP',10,3,4,50548],
+['GOVERNMENT',10,2,5,25539],
+['TOUR SERIES',10,1,6,23160],
+['ONLINE TRAVEL AGENT ',11,6,1,364080],
+['AD HOC TOUR GROUPS',11,5,2,222563],
+['NEGOTIATED CORP',11,4,3,44292],
+['TOUR SERIES',11,3,4,37868],
+['CORP PACKAGES',11,2,5,13370],
+['GOVERNMENT',11,1,6,10634],
+
+        /*Paste data here*/
+        ]);
+
+      var options = {
+        height: 750,
+        colorAxis: {colors: ['#34a853', '#fbbc05']},
+        sizeAxis: {minValue: 0,  maxSize: 50},
+        animation: {
+          duration: 1000,
+          easing: 'linear',
+          startup: true
+        },
+        hAxis: { gridlines: {color: 'transparent'}, ticks: [0, {v:1, f:'JAN'}, {v:2, f:'FEB'}, {v:3, f:'MAR'}, {v:4, f:'APR'}, {v:5, f:'MAY'}, {v:6, f:'JUN'}, {v:7, f:'JULY'}, {v:8, f:'AUG'}, {v:9, f:'SEP'}, {v:10, f:'OCT'}, {v:11, f:'NOV'}, {v:12, f:'DEC'}], baselineColor: '#fff'},
+        vAxis: { gridlines: {color: 'transparent'}, ticks: [0, 1, 2, 3, 4, 5, 6, 7], textStyle: {color:'#fff'}},
+        bubble: {
+                    textStyle: {
+                      fontSize: 12,
+                      color: '#212121',
+                      bold: false,
+                      italic: false,
+                      auraColor: '#fff'
+                    }}
+      };
+
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
+
+      google.visualization.events.addListener(chart, animate);
+
+      chart.draw(data, options);
+
+      function animate() {
+        var data = google.visualization.arrayToDataTable([ ]);
+        
+
+        chart.draw(data, options);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
+</body>
+</html>
+

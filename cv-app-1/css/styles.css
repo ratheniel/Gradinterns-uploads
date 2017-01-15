@@ -1,0 +1,73 @@
+body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #4285f4;
+      }
+
+/**HEADER**/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:100,300,400');
+
+@font-face {
+font-family: brandonBlack;  
+src: url(http://www.cc.com/sitewide/webkit_fonts/brandon-grotesque-black.woff2);  
+font-weight: normal;  
+}
+
+@font-face {
+font-family: Oxide;  
+src: url( https://use.typekit.net/af/ebae5e/000000000000000000016821/27/l?subset_id=2&fvd=n4&token=F7EG3TJPI9VCWzIhy3hAk1WthJ5P5W5DIx6o0Fx57V543bbZan6JPO33loJtPE0nYHfRq6Ne6dADfduIE7NG5YvzD3vhku6Z0VoZRPaUT5xAvL6A2LfL0J4teOiYTQbRbgKcw1KhHjHegu5PB0XXzw%3D%3D);
+font-weight: normal;  
+}
+
+@font-face {
+font-family: bebasBold;  
+src: url( http://thegradinterns.com/wp-content/uploads/useanyfont/160501065342BebasNeue-Bold.woff);
+font-weight: normal;  
+}
+@font-face {
+font-family: bebasBook;  
+src: url(http://thegradinterns.com/wp-content/uploads/useanyfont/160503102748BebasNeue-Book.woff);
+font-weight: normal;  
+}
+
+.chart {
+	width: 100%
+	padding: 13px;
+	margin-right: 13px;
+}
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .bb {
+  max-width: 46%
+}
+
+.bb1 {
+  max-width: 96%
+}
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  }
+
+  

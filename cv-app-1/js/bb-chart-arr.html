@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+  <title>Continuous Animation Example</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // [START script_body]
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart () {
+
+      var data = google.visualization.arrayToDataTable([
+         /*Paste data here*/
+          ['ID', 'X', 'Y','Top Listed', 'ARR'],
+          ['BAR',1,6,1,218],
+['TIME SHARE',1,5,2,187],
+['CONSUMER PROMOTION',1,4,3,182],
+['INTERLINER / TRADE DISCOUNT',1,3,4,169],
+['OVERSEAS TOUR OPERATORS',1,2,5,157],
+['LOCAL TOUR OPERATORS',1,1,6,155],
+['BAR',2,6,1,216],
+['TIME SHARE',2,5,2,179],
+['CONSUMER PROMOTION',2,4,3,172],
+['OVERSEAS TOUR OPERATORS',2,3,4,171],
+['LOCAL TOUR OPERATORS',2,2,5,151],
+['AD HOC TOUR GROUPS',2,1,6,146],
+['BAR',3,6,1,216],
+['TIME SHARE',3,5,2,185],
+['BANQUET',3,4,3,171],
+['CONSUMER PROMOTION',3,3,4,160],
+['LOCAL TOUR OPERATORS',3,2,5,152],
+['AD HOC TOUR GROUPS',3,1,6,149],
+['BAR',4,6,1,221],
+['INTERLINER / TRADE DISCOUNT',4,5,2,170],
+['CONSUMER PROMOTION',4,4,3,167],
+['BANQUET',4,3,4,165],
+['LOCAL TOUR OPERATORS',4,2,5,161],
+['TIME SHARE',4,1,6,140],
+['BAR',5,6,1,209],
+['TIME SHARE',5,5,2,189],
+['CONSUMER PROMOTION',5,4,3,184],
+['BANQUET',5,3,4,181],
+['OVERSEAS TOUR OPERATORS',5,2,5,160],
+['LOCAL TOUR OPERATORS',5,1,6,153],
+['BAR',6,6,1,214],
+['TIME SHARE',6,5,2,189],
+['OVERSEAS TOUR OPERATORS',6,4,3,168],
+['LOCAL TOUR OPERATORS',6,3,4,149],
+['CONSUMER PROMOTION',6,2,5,149],
+['AD HOC TOUR GROUPS',6,1,6,135],
+['INTERLINER / TRADE DISCOUNT',7,6,1,240],
+['BAR',7,5,2,220],
+['CONSUMER PROMOTION',7,4,3,193],
+['TIME SHARE',7,3,4,181],
+['LOCAL TOUR OPERATORS',7,2,5,178],
+['RELIGIOUS OUTING',7,1,6,176],
+['CORP LONGSTAY',8,6,1,284],
+['CONSUMER PROMOTION',8,5,2,263],
+['BAR',8,4,3,253],
+['OVERSEAS TOUR OPERATORS',8,3,4,235],
+['TIME SHARE',8,2,5,189],
+['LOCAL TOUR OPERATORS',8,1,6,181],
+['BAR',9,6,1,215],
+['CORP LONGSTAY',9,5,2,201],
+['OVERSEAS TOUR OPERATORS',9,4,3,187],
+['CONSUMER PROMOTION',9,3,4,179],
+['GDS WORLDWIDE CORP',9,2,5,177],
+['TIME SHARE',9,1,6,175],
+['INTERLINER / TRADE DISCOUNT',10,6,1,432],
+['MISC DISCOUNT',10,5,2,236],
+['BAR',10,4,3,219],
+['BANQUET',10,3,4,160],
+['CONSUMER PROMOTION',10,2,5,160],
+['LOCAL TOUR OPERATORS',10,1,6,147],
+['BAR',11,6,1,230],
+['INTERLINER / TRADE DISCOUNT',11,5,2,197],
+['BANQUET',11,4,3,191],
+['TIME SHARE',11,3,4,189],
+['CONSUMER PROMOTION',11,2,5,177],
+['GDS WORLDWIDE CORP',11,1,6,176],
+        /*Paste data here*/
+        ]);
+
+      var options = {
+        height: 750,
+        colorAxis: {colors: ['#34a853', '#fbbc05']},
+        sizeAxis: {minValue: 0,  maxSize: 50},
+        animation: {
+          duration: 1000,
+          easing: 'linear',
+          startup: true
+        },
+        hAxis: { gridlines: {color: 'transparent'}, ticks: [0, {v:1, f:'JAN'}, {v:2, f:'FEB'}, {v:3, f:'MAR'}, {v:4, f:'APR'}, {v:5, f:'MAY'}, {v:6, f:'JUN'}, {v:7, f:'JULY'}, {v:8, f:'AUG'}, {v:9, f:'SEP'}, {v:10, f:'OCT'}, {v:11, f:'NOV'}, {v:12, f:'DEC'}], baselineColor: '#fff'},
+        vAxis: { gridlines: {color: 'transparent'}, ticks: [0, 1, 2, 3, 4, 5, 6, 7], textStyle: {color:'#fff'}},
+        bubble: {
+                    textStyle: {
+                      fontSize: 12,
+                      color: '#212121',
+                      bold: false,
+                      italic: false,
+                      auraColor: '#fff'
+                    }}
+      };
+
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
+
+      google.visualization.events.addListener(chart, animate);
+
+      chart.draw(data, options);
+
+      function animate() {
+        var data = google.visualization.arrayToDataTable([ ]);
+        
+
+        chart.draw(data, options);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
+</body>
+</html>
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <html>
+<head>
+  <title>Continuous Animation Example</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // [START script_body]
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart () {
+
+      var data = google.visualization.arrayToDataTable([
+         /*Paste data here*/
+          ['ID', 'X', 'Y','Top Listed', 'Room Nights'],
+          ['ONLINE TRAVEL AGENT ',1,6,1,1920],
+['LOCAL TOUR OPERATORS',1,5,2,1453],
+['AD HOC TOUR GROUPS',1,4,3,629],
+['GLOBAL WHOLESALERS ',1,3,4,552],
+['NEGOTIATED CORP',1,2,5,442],
+['BAR',1,1,6,384],
+['ONLINE TRAVEL AGENT ',2,6,1,1635],
+['LOCAL TOUR OPERATORS',2,5,2,1548],
+['AD HOC TOUR GROUPS',2,4,3,571],
+['TOUR SERIES',2,3,4,499],
+['BAR',2,2,5,420],
+['GLOBAL WHOLESALERS ',2,1,6,378],
+['ONLINE TRAVEL AGENT ',3,6,1,1725],
+['LOCAL TOUR OPERATORS',3,5,2,1389],
+['TOUR SERIES',3,4,3,1343],
+['AD HOC TOUR GROUPS',3,3,4,1319],
+['GLOBAL WHOLESALERS ',3,2,5,427],
+['MEETINGS',3,1,6,316],
+['AD HOC TOUR GROUPS',4,6,1,1290],
+['ONLINE TRAVEL AGENT ',4,5,2,1125],
+['LOCAL TOUR OPERATORS',4,4,3,1105],
+['BAR',4,3,4,412],
+['GLOBAL WHOLESALERS ',4,2,5,409],
+['TOUR SERIES',4,1,6,313],
+['ONLINE TRAVEL AGENT ',5,6,1,1473],
+['LOCAL TOUR OPERATORS',5,5,2,1305],
+['AD HOC TOUR GROUPS',5,4,3,975],
+['BAR',5,3,4,428],
+['GLOBAL WHOLESALERS ',5,2,5,366],
+['NEGOTIATED CORP',5,1,6,247],
+['ONLINE TRAVEL AGENT ',6,6,1,1064],
+['LOCAL TOUR OPERATORS',6,5,2,726],
+['BAR',6,4,3,343],
+['AD HOC TOUR GROUPS',6,3,4,339],
+['TOUR SERIES',6,2,5,227],
+['NEGOTIATED CORP',6,1,6,211],
+['ONLINE TRAVEL AGENT ',7,6,1,2217],
+['LOCAL TOUR OPERATORS',7,5,2,1414],
+['AD HOC TOUR GROUPS',7,4,3,740],
+['GLOBAL WHOLESALERS ',7,3,4,712],
+['BAR',7,2,5,504],
+['TOUR SERIES',7,1,6,483],
+['LOCAL TOUR OPERATORS',8,6,1,1518],
+['AD HOC TOUR GROUPS',8,5,2,1437],
+['ONLINE TRAVEL AGENT ',8,4,3,1353],
+['TOUR SERIES',8,3,4,610],
+['GLOBAL WHOLESALERS ',8,2,5,600],
+['BAR',8,1,6,435],
+['ONLINE TRAVEL AGENT ',9,6,1,2167],
+['LOCAL TOUR OPERATORS',9,5,2,1034],
+['AD HOC TOUR GROUPS',9,4,3,837],
+['MEETINGS',9,3,4,446],
+['BAR',9,2,5,408],
+['GLOBAL WHOLESALERS ',9,1,6,334],
+['ONLINE TRAVEL AGENT ',10,6,1,1898],
+['LOCAL TOUR OPERATORS',10,5,2,1134],
+['AD HOC TOUR GROUPS',10,4,3,533],
+['SPORTS EVENTS',10,3,4,450],
+['BAR',10,2,5,365],
+['GLOBAL WHOLESALERS ',10,1,6,306],
+['AD HOC TOUR GROUPS',11,6,1,1758],
+['ONLINE TRAVEL AGENT ',11,5,2,1751],
+['LOCAL TOUR OPERATORS',11,4,3,827],
+['GOVT GROUPS',11,3,4,440],
+['MEETINGS',11,2,5,367],
+['TOUR SERIES',11,1,6,284],
+
+        /*Paste data here*/
+        ]);
+
+      var options = {
+        height: 750,
+        colorAxis: {colors: ['#34a853', '#fbbc05']},
+        sizeAxis: {minValue: 0,  maxSize: 50},
+        animation: {
+          duration: 1000,
+          easing: 'linear',
+          startup: true
+        },
+        hAxis: { gridlines: {color: 'transparent'}, ticks: [0, {v:1, f:'JAN'}, {v:2, f:'FEB'}, {v:3, f:'MAR'}, {v:4, f:'APR'}, {v:5, f:'MAY'}, {v:6, f:'JUN'}, {v:7, f:'JULY'}, {v:8, f:'AUG'}, {v:9, f:'SEP'}, {v:10, f:'OCT'}, {v:11, f:'NOV'}, {v:12, f:'DEC'}], baselineColor: '#fff'},
+        vAxis: { gridlines: {color: 'transparent'}, ticks: [0, 1, 2, 3, 4, 5, 6, 7], textStyle: {color:'#fff'}},
+        bubble: {
+                    textStyle: {
+                      fontSize: 12,
+                      color: '#212121',
+                      bold: false,
+                      italic: false,
+                      auraColor: '#fff'
+                    }}
+      };
+
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
+
+      google.visualization.events.addListener(chart, animate);
+
+      chart.draw(data, options);
+
+      function animate() {
+        var data = google.visualization.arrayToDataTable([ ]);
+        
+
+        chart.draw(data, options);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
+</body>
+</html>
+

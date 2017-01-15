@@ -1,0 +1,519 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/styles.css">
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      
+    </style>
+     <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:100,300,400');
+    </style> 
+    <style is="custom-style">
+      .heading {
+        padding: 10px 15px;
+        margin-top: 20px;
+        background-color: #f3f3f3;
+        border: 1px solid #dedede;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        width: 100%;
+        text-align: left;
+      }
+      .content {
+        padding: 15px;
+        border: 1px solid #dedede;
+        border-top: none;
+        background-color: #fff;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @apply(--shadow-elevation-2dp);
+      }
+
+      .card-actions{
+        background-color: #f5f5f1;
+      }
+        
+        paper-fab{
+          --paper-fab-background: #424242;
+           @apply(--shadow-elevation-4dp);
+        }
+
+        paper-fab.excel{
+          --paper-fab-background: #207347;
+        }
+
+        paper-fab.pp{
+          --paper-fab-background: #d04727;
+        }
+
+        paper-fab.word{
+          --paper-fab-background: #2c5897;
+        }
+
+        paper-fab.iwork{
+          --paper-fab-background: #ff9401;
+        }
+
+        paper-fab.ai{
+          --paper-fab-background: #42362c;
+        }
+
+        paper-fab.code{
+          --paper-fab-background: #e50914;
+        }
+        
+        paper-fab.data{
+          --paper-fab-background: #1086ce;
+        }
+
+        paper-fab.green{
+          --paper-fab-background: #25d366;
+        }
+
+        paper-button.green {
+        background-color: #25d366;
+        color: white;
+      }
+
+      paper-button.blue {
+        background-color: #00c4ff;
+        color: white;
+      }
+        
+
+
+      paper-button a {
+    /* These mixins (from iron-flex-layout) center the link text. */
+    @apply(--layout-horizontal);
+    @apply(--layout-center-center);
+    color: #fff;
+    text-decoration: none;
+  }
+       paper-button {
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color: #fff;
+    }
+    .card2 {
+    @apply(--shadow-elevation-8dp);
+}
+    </style>
+      
+       
+<!-- paper card -->
+<div class="col-lg-4 col-md-4 col-sm-4" style="margin:5px 0px 5px 0px; float: left">    
+<paper-card style="font-family: 'Roboto', serif; font-weight: 300;" heading="Rathes Waran" image="../images/cv-placeholder.png" alt="CVPic" style="margin:0;">
+  <div class="card-content">
+          <div class="text-center" style="font-family: 'brandonblack', serif; font-size: 1.1em;">
+            BUSINESS ANALYST • STRATEGIC PLANNING • BUSINESS DEVELOPMENT
+          </div>
+          <div class="text-center" style="font-family: 'bebasbook', serif; font-size: 1.1em;letter-spacing: 1.5px;">
+            INTUITIVE | CHARISMATIC | ADAPTABLE | RESOURCEFUL
+          </div>
+
+          <button style="font-family: 'oxide', serif; font-size: 0.8em;" class="heading" aria-expanded$="[[isExpanded(opened1)]]" aria-controls="collapse2" onclick="toggle('#collapse2')">objective</button>
+
+              <iron-collapse id="collapse2" tabindex="0" opened="{{opened2}}">
+                <div class="content">
+                  <div>Eager to apply an extensive technology and business consulting knowledge to create value added, well-received and profitable services. Core technical expertise include Business Analytics, Business Forecasting, Data Visualisation, Digital Marketing, Web Development, SEO, Graphic Design, Management Information Systems &amp; E-Commerce. Coined with business consulting knowledge with deep foundations in International Trade (Procurement), International Strategic Management, Financial Statistics and Descriptive Statistics.
+              </div>
+             </div>
+              </iron-collapse> 
+  </div>
+  <div class="card-actions">
+    <paper-button raised class="green">
+    <a href="tel:+60123652606">CONTACT</a>
+    </paper-button>
+    <paper-button raised class="blue">
+    <a href="https://drive.google.com/file/d/0Bwbit-IS4rDRQXFaOEMwN1JWRnM/view?usp=sharing" target="_blank">DOWNLOAD CV</a>
+    </paper-button>
+  </div>
+</paper-card>
+</div>
+<!-- paper card -->
+
+<!-- paper card 2 -->
+<div class="col-lg-8 col-md-8 col-sm-8" style="margin: 5px 0px 5px 0px; float: right;">
+    <div class="card" style="margin:0;">
+      <div class="circle" style="font-family: 'roboto Slab', serif;"> I </div>
+      <h1 style="font-family: 'bebasbold', serif; display: inline-block; padding-left: 20px;">Formal Education</h1>
+       <!-- start ed 1 -->
+      <div class="clearfix" style="margin:0;font-family: 'bebasbold', serif; letter-spacing: 1.5px;"> <div class="text-center pull-left" style=" max-width: 25%; margin: 0px 0px 0px 0px; padding-top: 2.5%;letter-spacing: 1.5px;"> 3 <br> years <br> (Sept. 2012 – Aug. 2015)</div> 
+      <div class="pull-right" style=" font-family: 'brandonblack', serif; font-weight: 400; min-width: 75%; max-width: 75%; margin: 0px 0px 0px 0px; border-left: 3px solid #4285f4; padding: 0px 0px 0px 10px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened3)]]" aria-controls="collapse3"  onclick="toggle('#collapse3')" style="font-size: 1em;"> 
+      <div class="pull-left" style="width:85%;"> BACHELOR OF ARTS, INTERNATIONAL BUSINESS WITH SPECIALISATION (MAJOR) IN INTERNATIONAL TRADE.  </div> <paper-fab mini class="pull-right" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>  <iframe src="../degree-parallax/index.html" style="width: 100%; height: 550px; border: none; margin: 0;" sandbox="allow-scripts allow-same-origin" scrolling="no" class="hidden-xs hidden-sm hidden-md"></iframe> <p class="hidden-xs hidden-sm hidden-md" style="font-family: 'Roboto', serif; font-weight: 100;"> <i> Javascript inspired by Apple TV </i></p>
+         </button>
+
+        <iron-collapse id="collapse3" tabindex="0" opened="{{opened3}}">
+        
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+             
+             <iframe src="../degree-parallax/index.html" style="width: 100%; height: 550px; border: none; margin: 0;" sandbox="allow-scripts allow-same-origin" scrolling="no" class="visible-xs visible-sm visible-md"></iframe> <p class="visible-xs visible-sm visible-md" style="font-family: 'Roboto', serif; font-weight: 100;"> <i> Javascript inspired by Apple TV </i></p>
+            <div>  Cologne Business School, University of Applied Sciences, Germany. <br> Grade (EU): 72% (Maximum achievable: 100%). <br> Bachelor Thesis: The Philosophical Differences of Social Media Between Asia and The Western World. </div>
+
+          </div>
+        </iron-collapse>
+        </div>
+         </div>
+      <!-- end ed 1 -->
+     
+       <!-- start ed 2 -->
+      <div class="clearfix" style="margin:0;font-family: 'bebasbold', serif; letter-spacing: 1.5px;"> <div class="text-center pull-left" style=" max-width: 25%; margin: 0px 0px 0px 0px; padding-top: 2.5%;letter-spacing: 1.5px;"> 3 <br> months <br> (Sept. 2014 – DEC. 2014)</div> 
+      <div class="pull-right" style=" font-family: 'brandonblack', serif; font-weight: 400; min-width: 75%; max-width: 75%;   margin: 0px 0px 0px 0px; border-left: 3px solid #25d366; padding: 0px 0px 0px 10px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened4)]]" aria-controls="collapse4"  onclick="toggle('#collapse4')" style="font-size: 1em;"> <div class="pull-left" style="width:85%;"> SEMESTER ABROAD </div> <paper-fab mini class="pull-right" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse4" tabindex="0" opened="{{opened4}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> International College of Management Sydney, Australia. <br> GPA (AU) : 3.5 (Maximum achievable: 4.0) </div>
+          </div>
+        </iron-collapse>
+        </div>
+         </div>
+      <!-- end ed 2 -->
+
+        <!-- start ed 3 -->
+      <div class="clearfix" style="margin:0;font-family: 'bebasbold', serif; letter-spacing: 1.5px;"> <div class="text-center pull-left" style=" max-width: 25%; margin: 0px 0px 0px 0px; padding-top: 2.5%;letter-spacing: 1.5px;"> 8 <br> months <br> (Jan. 2011 – Sept. 2011)</div> 
+      <div class="pull-right" style=" font-family: 'brandonblack', serif; font-weight: 400; min-width: 75%; max-width: 75%;   margin: 0px 0px 0px 0px; border-left: 3px solid #4285f4; padding: 0px 0px 0px 10px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened5)]]" aria-controls="collapse5"  onclick="toggle('#collapse5')" style="font-size: 1em;"> <div class="pull-left" style="width:85%;"> GERMAN AS A FOREIGN LANGUAGE (DEUTCH ALS FREMDSPRACHE) </div> <paper-fab mini class="pull-right" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse5" tabindex="0" opened="{{opened5}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> Ruhr – Universität Bochum, Germany. <br> German A2 – B2 </div>
+          </div>
+        </iron-collapse>
+        </div>
+         </div>
+      <!-- end ed 3 -->
+
+    </div>
+</div>
+<!-- paper card -->
+<div class="col-lg-4 col-md-4 col-sm-4" style="margin:5px 0px 5px 0px; clear: left">    
+<paper-card  heading="Skills" style="margin:0; min-width: 100%;">
+  <div class="card-content" style= "font-family: 'bebasbook', serif; font-weight: 300;">
+      <div style="font-size: 1em; background-color: #fff;">
+      <paper-fab mini class="pull-left excel" src="../images/noun_15351_cc.svg"> </paper-fab>
+      <div class="pull-right" style="font-size: 1.2em; color:black; width:75%;"> Excel: <br> VLOOKUP <br> IF STATEMENTS <br> INDEX &amp; MATCH <br> Database Management <br> Automation</div> 
+      </div> 
+      
+      
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 40%">
+      <paper-fab mini class="pull-left pp" src="../images/noun_611087_cc.svg"></paper-fab>
+      
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black;width:75%;"> MS Powerpoint (advanced) </div> 
+      </div> 
+
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 13%">
+      <paper-fab mini class="pull-left word" src="../images/noun_317689_cc.svg"> </paper-fab>
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black;width:75%; padding-top: 3%;"> MS Word (advanced) </div> 
+      </div> 
+
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 13%">
+      <paper-fab mini class="pull-left iwork" src="../images/noun_304933_cc.svg"> </paper-fab>
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black; width:75%;"> Apple iWork (advanced): Numbers, Pages, Keynote </div> 
+      </div> 
+      
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 13%">
+      <paper-fab mini class="pull-left ai" src="../images/noun_647228_cc.svg"> </paper-fab>
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black; width:75%; padding-top: 3%;"> Adobe Illustrator </div> 
+      </div> 
+
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 13%">
+      <paper-fab mini class="pull-left code" src="../images/noun_32232_cc.svg"> </paper-fab>
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black; width:75%; padding-top: 3%;"> HTML5, CSS, Java script. </div> 
+      </div> 
+
+      <div style="font-size: 1em; background-color: #fff;">
+      <div style="padding-top: 13%;">
+      <paper-fab mini class="pull-left data" src="../images/noun_17425_cc.svg"> </paper-fab>
+      </div>
+      <div class="pull-right" style="font-size: 1.2em; color:black; width:75%; padding-top: 3%; padding-bottom: 13%"> Data Visualisation </div> 
+      </div>
+
+</paper-card>
+</div>
+</div>
+<!-- paper card -->
+<!-- paper card 2 -->
+
+<div class="col-lg-8 col-md-8 col-sm-8 pull-right" style="margin:5px 0px 5px 0px;">
+    <div class="card" id="three" style="margin:0;">
+      <div class="circle" style="font-family: 'roboto Slab', serif;"> II </div>
+      <h1 style="font-family: 'bebasbold', serif; display: inline-block; padding-left: 20px;"> WORK EXPERIENCES/ INTERNSHIPS</h1>
+      <!-- start exp 1.1 -->
+      <div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> 6 MONTHS (JULY. 2016 – PRESENT) </div>
+      
+      
+      <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened6)]]" aria-controls="collapse6"  onclick="toggle('#collapse6')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> SWISS-GARDEN INTERNATIONAL SDN. BHD. <br> POSITION: EXECUTIVE ASSISTANT TO THE CEO </div> <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse6" tabindex="0" opened="{{opened6}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> 
+                    <ol type="I">
+                <li>Researched on unemployment rates for the world, developing economies, emerging economies, EU &amp; Malaysia. </li>
+                <li>    Researched on AirBnB and it’s impact on the Hotel Industry; research included identifying Rental Rates in Kuala Lumpur, Average Number of listings, and researching through 2 theses to identify methods to counter AirBnB. </li>
+                <li>    Contributed to the implementation of the database management system for all hotels by proposing a shared drive concept, as well as creating the database flowchart and reviewing it’s guidelines.</li>
+                <li>    Researched on the ISO Certification process, identified it’s requirements on a basic level, had tele- conversations with ISO Providers (TÜV, SGS, SIRIM). Created a comparison on how each provider differentiated both methodically, and profitably for the group. Created a cost evaluation based on quotations sent from providers and negotiated with TÜV to reduce costs on labour during the certification process. Co-chaired a meeting with the director of OSK for the TÜV presentation, acquired external consultant contact details that the OSK Corporate Office is currently using for the ISO implementation.</li>
+                <li>    Reviewed and summarised the costs in terms of capital &amp; operational expenditure for the hotels according to a 5 year proposal plan for the Group-Wide Loyalty Programme.</li>
+                <li>    Collaborated with the Director of Operations and 10 chefs to personally write 29 recipe cards to prevent disparity in taste of F&amp;B Items across the properties. </li>
+                <li>    Worked with the Group Financial Controller and the Group Human Resources Manager on allocating cost savings regarding staff rationalisation after the residences units were restructured.</li>
+                <li>    Created a format to compare 2016, SGI’s targets and the Hotels’ Submission for the budgeting process. Perfected the template using IF STATEMENTS to now identify variance increases and decreases between the year 2016 &amp; the hotel’s submission, as well as the variance between the hotel’s submission vs. SGI’s target. </li>
+                <li>    With the help of the CEO, created, wrote and re-wrote the Hotel Monthly Marketing Report (HMMR) Guideline Manual to completion; the manual included forming guidelines for 13 sections, collating these sections and understanding the functionality of these sections.</li>
+                <li>    Prepared &amp; redeveloped pre-existing hotel monthly marketing report templates, providing easier navigation, pre-formulated data summary sentences &amp; underperforming indicators using the TEXT FUNCTION &amp; IF STATEMENTS; print guidelines combined with a structured submission format. </li>
+                <li>    Created parameters and questions for the hotel division’s brainstorming session for the Head of Business Process of OSK Holdings Berhad. Questions and parameters were segmented into demographic, psychographic, behavioural and geographic segments. </li>
+                <li>    Created a format to map different review income sources on an ad hoc basis from Booking.com, Agoda, Expedia, TripAdvisor and the hotel’s CRM system. Identified the weighted rating formula for reviews through researching 2 theses and implemented the same method to the CRM and created a consolidated weighted rating score. Visualised the consolidation for the entire year of 2016 using Google Chart APIs for all properties.</li>
+                <li>    Further enhanced the geographical report by creating a comparable geographic analysis by regions/ continents &amp; country; included years 2013-2016. Further automated the report by using VLOOKUP, IF STATEMENTS to automatically map the top 5 countries and regions according to market segments and the top 5 market segments according to each country for all properties.</li>
+                <li>    Created an automated rooms analysis format based on the rooms performance report to highlight the Top 5 market segments according to revenue, room nights and ARR.</li>
+                   </ol>  
+       </div>
+          </div>
+        </iron-collapse>
+        </div>
+      <!-- end exp 1.1 -->
+     <!-- start exp 1 -->
+      <div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> 8 MONTHS (JAN. 2016 – AUGUST 2016) </div>
+      
+      
+      <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened6)]]" aria-controls="collapse6"  onclick="toggle('#collapse6')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> GRADINTERNS <br> POSITION: CO-FOUNDER/ HEAD </div> <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse6" tabindex="0" opened="{{opened6}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> 
+                    <ol type="I">
+                <li>Sourced a web host, acquired a domain and installed the necessary plugins for SEO.</li>
+                <li>Created a value proposition model</li>
+                <li>Created a directory of companies and universities to contact. </li>
+                <li>Created the necessary step by step procedure for students to apply effortlessly.</li>
+                <li>Learned CSS and HTML while integrating the necessary tools such as a user registration system, forms and conditional forms. </li>
+                <li>Wrote the Terms and Conditions and Privacy Policy for the website. </li>
+                <li>Wrote and facilitated student contracts and company memorandums of understanding. </li>
+                <li>Sourced the necessary visa requirements for European students to conduct internships on a 3 month basis and more than 3 months. </li>
+                <li>Sourced the accommodation for students.</li> 
+                <li>Prepared the general job tasks for students to apply according to their fields.</li>
+                <li>Evaluated and structured pricing according to perceived market value. </li>
+                <li>Strategically approached 5 major companies and signed on 3 companies on an exclusive and non-exclusive basis before launch. </li>
+                <li>Published 3 articles for European students including a cost of living comparison between 4 global cities. </li>
+                <li>Graphically Designed marketing materials for promotional and content building purposes. </li>
+                   </ol>  
+       </div>
+          </div>
+        </iron-collapse>
+        </div>
+      <!-- end exp 1 -->
+      <!-- start exp 2 -->
+<div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> 3 MONTHS (JULY. 2015 – OCT. 2015) </div>
+      
+      
+      <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened7)]]" aria-controls="collapse7"  onclick="toggle('#collapse7')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> ELISE RENEWABLE RESOURCES LTD. (UNITED KINGDOM) <br> POSITION: INTERN
+ </div> <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse7" tabindex="0" opened="{{opened7}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> 
+                    <ol type="I">
+                <li>Created a company website: eliserenewables.com for this start-up, using turnkey solutions to provide better communication and access for buyers and suppliers for the company. </li>
+                <li> Procured suppliers including a London FTSE 250 Index company and dealt with buyers in Malaysia and freight forwarders in the UK for shipments of large quantities of renewable plastics between UK and Malaysia. </li>
+                   </ol>  
+       </div>
+          </div>
+        </iron-collapse>
+        </div>
+         <!-- end exp 2 -->
+         <!-- start exp 3 -->
+<div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> 3 MONTHS (JUNE. 2012 – SEPT. 2012) </div>
+      
+      
+      <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened8)]]" aria-controls="collapse8"  onclick="toggle('#collapse8')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> ESSEN RESOURCES SDN. BHD. <br>
+POSITION: INTERN (MANDATORY INTERNSHIP) 
+ </div> <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse8" tabindex="0" opened="{{opened8}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> 
+                    <ol type="I">
+                <li>Rotated within Production/ Manufacturing/ Administration/ Supply Chain departments. </li> 
+                <li>Learned about the recycling process from input of post-consumed plastics to palletizing as well as identification of the different types of plastics.</li> 
+                <li> Negotiated and dealt with suppliers from countries such as Germany, Belgium and Spain for raw materials. </li>   
+                   </ol>  
+       </div>
+          </div>
+        </iron-collapse>
+        </div>
+         <!-- end exp 3 -->
+         <!-- start exp 4 -->
+<div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> 1  MONTH  (OCT. 2014 – NOV. 2014) </div>
+      
+      
+      <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+      
+      <button class="heading" aria-expanded$="[[isExpanded(opened9)]]" aria-controls="collapse9"  onclick="toggle('#collapse9')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> TOM TOM TELEMATICS (AUSTRALIA) <br>
+POSITION: MARKETING EXECUTIVE (PART – TIME)
+ </div> <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+
+        <iron-collapse id="collapse9" tabindex="0" opened="{{opened9}}">
+          <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+            <div> 
+                    <ol type="I">
+                <li>Lead sales for TomTom Vehicle Tracking Systems by procuring buyers consisting of small medium sized companies to provide reliable and efficient solutions for their business. </li>  
+                   </ol>  
+       </div>
+          </div>
+        </iron-collapse>
+        </div>
+         <!-- end exp 4 -->
+          <!-- start exp 4 -->
+          <div style="font-family: 'brandonblack', serif; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 10px; margin-bottom: 10px; "> ∞ (JAN. 2014 – PRESENT) </div>
+                
+                
+                <div style=" font-family: 'brandonblack', serif; font-weight: 400;  margin: 0px 0px 0px 0px;"> 
+                
+                <button class="heading" aria-expanded$="[[isExpanded(opened10)]]" aria-controls="collapse10"  onclick="toggle('#collapse10')" style="font-size: 1em; background-color: #fff;"> <div class="pull-left" style="width:85%;font-size: 1em; color:black;"> KREIEREN KÖLN ENTERPRISE (MALAYSIA) <br>
+POSITION: SOLE PROPRIETORSHIP (FREELANCE) 
+           </div> 
+           <paper-fab mini class="pull-right green" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+                   </paper-fab>
+                   </button>
+
+                  <iron-collapse id="collapse10" tabindex="0" opened="{{opened10}}">
+                    <div class="content" style="font-family: 'Roboto Slab', serif; font-weight: 100; font-size: 1em;letter-spacing: 1px;">
+                      <div> 
+                              <ol type="I">
+                          <li>Provided business consultation, graphic, marketing and administrative work for a Small Medium Enterprise. 
+                          <li>Balanced meeting client requirements and establishing long-term internal relationships. </li>
+                          <li>Experience with reaching agreements with demanding/challenging customers. </li>
+                          <li>Aligned future business steps of said Small Medium Enterprise to a more result-orientated approach.  </li>  
+                             </ol>  
+                 </div>
+                    </div>
+                  </iron-collapse>
+                  </div>
+          <!-- end exp 4 -->
+    </div>
+   </div>
+
+        </div>
+      </div>
+    </iron-collapse>   
+ 
+ 
+<div class="col-lg-8 col-md-8 col-sm-8 pull-right" style="margin:5px 0px 5px 0px;">
+    <div class="card clearfix" id="three" style="margin:0;">
+      <div class="circle" style="font-family: 'roboto Slab', serif;"> III </div>
+      <h1 style="font-family: 'bebasbold', serif; display: inline-block; padding-left: 20px; padding-bottom: 20px;"> Continuing Education </h1>
+    
+    <!-- start ed 1 -->
+      
+      <div class="pull-right" style=" font-family: 'Roboto Slab', serif; font-weight: 100; min-width: 100%; max-width: 100%; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 10px;"> 
+      <div> <h1 style="font-family: 'Roboto', serif; font-weight: 100;"> Business Metrics for Data Driven Companies </h1>
+      <button class="heading" aria-expanded$="[[isExpanded(opened11)]]" aria-controls="collapse11"  onclick="toggle('#collapse11')" style="font-size: 1em; font-family: 'Oxide', serif;"> <div class="pull-left" style="width:85%;"> Certificate </div> <paper-fab mini class="pull-right" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+      </div>
+
+        <iron-collapse id="collapse11" tabindex="0" opened="{{opened11}}">
+          <div class="content">
+            <img src="../images/'Coursera KRH7VE2DN5GE.pdf'.pdf" style="max-width: 50%; min-width: 50%;">
+          </div>
+        </iron-collapse>
+        </div>
+         
+      <!-- end ed 1 -->
+
+      <!-- start ed 2 -->
+      
+      <div class="pull-right" style=" font-family: 'Roboto Slab', serif; font-weight: 100; min-width: 100%; max-width: 100%; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 10px;"> 
+      <div> <h1 style="font-family: 'Roboto', serif; font-weight: 100;"> HTML, CSS, and Javascript for Web Developers </h1>
+      <button class="heading" aria-expanded$="[[isExpanded(opened12)]]" aria-controls="collapse12"  onclick="toggle('#collapse12')" style="font-size: 1em; font-family: 'Oxide', serif;"> <div class="pull-left" style="width:85%;"> Certificate </div> <paper-fab mini class="pull-right" src="../images/ic_keyboard_arrow_down_white_24px.svg">
+         </paper-fab>
+         </button>
+      </div>
+
+        <iron-collapse id="collapse12" tabindex="0" opened="{{opened12}}">
+          <div class="content">
+            <img src="../images/'Coursera GW2RE829ZWGS.pdf'.pdf" style="max-width: 50%; min-width: 50%;">
+          </div>
+        </iron-collapse>
+        </div>
+         </div>
+      <!-- end ed 2 -->
+</div>
+ 
+
+  </template>
+  <script>
+    Polymer({
+      is: 'my-view1',
+    });
+  </script>
+  <script>
+  function toggle(selector) {
+    document.querySelector(selector).toggle();
+  }
+  document.querySelector('template[is=dom-bind]').isExpanded = function(opened) {
+    return String(opened);
+  };
+</script>
+</dom-module>
