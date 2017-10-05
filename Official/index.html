@@ -836,7 +836,40 @@
             </form>
           </div>
         </div>
-                 
+          <!-- 1) copy the code -->
+			<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+			<script type="text/javascript">
+				$( "#contact-form" ).validate({
+				  rules: {
+					postcode: {
+					  required: true,
+					  number: true
+					},
+					tel: {
+					  required: true,
+					  phone: true
+					}
+				  },
+				  messages: {
+						name: "Enter your name",
+						business: "Enter your business name",
+						tel: "Enter your phone number",
+						postcode: "Enter your postcode"
+				  }
+				});
+
+				//validate phone number
+				$.validator.addMethod('phone', function(value, element) {
+					return this.optional(element) || (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''));
+				});
+			</script>
+
+			<!-- 2) copy styles of errors -->
+			<style>
+				form label.error { color: #F44336; margin:0;font-size: 14px;}
+				form input.error,form input.error:focus {box-shadow:0 0 0 1px #F44336 inset!important}
+				form input[name="tel"].wide { max-width:100%; }
+			</style>       
                   
             </li>
             
