@@ -1,42 +1,42 @@
 @font-face {
 font-family: sfdisplay-thin;
-src: url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.woff) ;
+src: url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Thin.otf) ;
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-semibold;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Semibold.otf) ;
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-regular;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Regular.otf);
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-medium;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Medium.otf) ;
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-light;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Light.otf) ;
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-heavy;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Heavy.otf) ;
 font-weight: normal; 
 }
 
 @font-face {
 font-family: sfdisplay-bold;
-src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.woff) ;
+src:  url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.eot) , url(http://thegradinterns.com/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.woff), url(https://ratheniel.github.io/Gradinterns-uploads/Official/Fonts/SanFranciscoDisplay-Bold.otf) ;
 font-weight: normal; 
 }
 
