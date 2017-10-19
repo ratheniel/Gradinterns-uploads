@@ -1,4 +1,50 @@
+@font-face {
+font-family: sfdisplay-thin;
+src: url(/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.eot) , url(/wp-content/uploads/useanyfont/171019035310SanFranciscoDisplay-Thin.woff) ;
+font-weight: normal; 
+}
 
+@font-face {
+font-family: sfdisplay-semibold;
+src: url(/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.eot) , url(/wp-content/uploads/useanyfont/171019035354SanFranciscoDisplay-Semibold.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-regular;
+src:  url(/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.eot) , url(/wp-content/uploads/useanyfont/171019035427SanFranciscoDisplay-Regular.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-medium;
+src:  url(/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.eot) , url(/wp-content/uploads/useanyfont/171019035451SanFranciscoDisplay-Medium.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-light;
+src:  url(/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.eot) , url(/wp-content/uploads/useanyfont/171019035514SanFranciscoDisplay-Light.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-heavy;
+src:  url(/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.eot) , url(/wp-content/uploads/useanyfont/171019035539SanFranciscoDisplay-Heavy.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-bold;
+src:  url(/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.eot) , url(/wp-content/uploads/useanyfont/171019035611SanFranciscoDisplay-Bold.woff) ;
+font-weight: normal; 
+}
+
+@font-face {
+font-family: sfdisplay-black;
+src: url(/wp-content/uploads/useanyfont/171019035642SanFranciscoDisplay-Black.eot) , url(/wp-content/uploads/useanyfont/171019035642SanFranciscoDisplay-Black.woff) ;
+font-weight: normal; 
+}
 
 
 .slide .hghlght {
