@@ -361,7 +361,7 @@
 				}
 				
 					  .slides.firstSlide .panel {
-					background: #F9F9F9;
+					background: #f9f9fe;
 					box-shadow:0 1px 1px rgba(0,0,0,0.20);
 					color: #fff;
 				  }
@@ -560,22 +560,20 @@
   });
 </script>
 
-<section class="slide autoHeight half-and-half scenic fade slideshow"  data-title="Home">
+<style type="text/css">
+  #bg{
+    width: 50%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:left;
+  }
+</style>
+
+
+<section class="slide half-and-half scenic fade slideshow hideForTablet"  data-title="Home">
   <div class="content">
     <div class="container">
-      <div class="wrap" style="background: #F4f4f4;">
-      
-      
-      
-        
-        <img src="assets/img/yg2.png" />
-          
-      
-      
-      
-       
-
-      </div>
+      <div class="wrap" style="background-image:url('assets/img/fixes/1.jpg'); background-position: right;background-repeat: no-repeat; background-size: cover;"> <p style="height: 200px;"></p> </div>
       
       <!-- SPLIT -->
       <div class="wrap center">
@@ -626,11 +624,72 @@
     </div>
     
   </div>
-  <div class="background shown" style="background-image:url(assets/img/img-6.jpg)"></div>
-		  <div class="background" style="background-image:url(assets/img/img-67.jpg)"></div>
-		  <div class="background" style="background-image:url(assets/img/video-2.jpg)"></div>
-		  <div class="background" style="background-image:url(assets/img/img-64.jpg)"></div>
-		  <div class="background" style="background-image:url(assets/img/img-87.jpg)"></div>
+  <div class="background shown" style="background-image:url(assets/img/fixes/2.jpg); margin-left: 50%;width: 52%;background-size: cover; background-repeat: no-repeat;"></div>
+		  <div class="background" style="background-image:url(assets/img/fixes/3.jpg); margin-left: 50%;width: 52%;background-size: cover; background-repeat: no-repeat;"></div>
+		  <div class="background" style="background-image:url(assets/img/fixes/4.jpg); margin-left: 50%;width: 52%;background-size: cover; background-repeat: no-repeat;"></div>
+		  <div class="background" style="background-image:url(assets/img/fixes/5.jpg); margin-left: 50%;width: 52%;background-size: cover; background-repeat: no-repeat;"></div>
+		  <div class="background" style="background-image:url(assets/img/fixes/6.jpg); margin-left: 50%;width: 52%;background-size: cover; background-repeat: no-repeat;"></div>
+</section>
+    <!-- END SECTION 0 -->
+
+<section class="slide half-and-half scenic fade slideshow hideForDesktop whiteSlide"  data-title="Home">
+  <div class="content">
+    <div class="container">
+      
+      <!-- SPLIT -->
+      <div class="wrap center">
+        
+       <div>
+                    <!-- Example typed -->
+                    <!-- copy scripts -->
+                    <!-- more settings: https://github.com/mattboldt/typed.js/#customization -->
+                    <script src="https://cdn.rawgit.com/mattboldt/typed.js/548c6ade/dist/typed.min.js"></script>
+                    <script>
+                      $(function(){
+                      $(".typed").typed({
+                        strings: ["waken your true voice.", "chieve pure vocal freedom.", "lign sound and soul.", "llow healing through sound."],
+                        typeSpeed: 50,
+                        backDelay: 2500,
+                        loop: true,
+                        shuffle: false
+                      });
+                      });
+                    </script>
+
+                    <!-- copy styles for blinking cursor -->
+                    <style>
+                    .typed-cursor{
+                      opacity: 1;
+                      -webkit-animation: blink 0.7s infinite;
+                      animation: blink 0.7s infinite;
+                    }
+                    @-webkit-keyframes blink {50%{opacity:0;}}
+                    @keyframes blink {50%{opacity:0;}}
+
+                    </style>
+
+                    <!-- code example -->
+                            
+                          <p class="js-tilt" data-tilt-max="-4" style="max-width: 100%; padding-top: 10%;">
+                          <img src="assets/img/logo.png" alt="logo" width="300" height="300"/>
+                        </p>
+                        <h1 class="fromBlur hideForTablet SFBold" style="color: rgba(249,249,254,0.75);font-size: 1.3em;" >A<span class="typed"></span></h1>
+                        </div>
+                    <!-- END -->  
+          
+          
+      </div>
+      
+      <!-- END SPLIT -->
+      
+    </div>
+    
+  </div>
+  <div class="background shown" style="background-image:url(assets/img/fixes/2.jpg);"></div>
+      <div class="background" style="background-image:url(assets/img/fixes/3.jpg);"></div>
+      <div class="background" style="background-image:url(assets/img/fixes/4.jpg);"></div>
+      <div class="background" style="background-image:url(assets/img/fixes/5.jpg);"></div>
+      <div class="background" style="background-image:url(assets/img/fixes/6.jpg);"></div>
 </section>
     <!-- END SECTION 0 -->
     
@@ -645,10 +704,11 @@
   });
 </script>
 
-<section class="slide autoHeight whiteSlide half-and-half" style="background: #F4F4F4"  data-title="Welcome to YogaSing">
+
+<section class="slide autoHeight whiteSlide half-and-half" style="background: #f9f9fe;"  data-title="Welcome to YogaSing">
   <div class="content">
     <div class="container">
-      <div class="wrap grey-background">
+      <div class="wrap">
       
         <div class="fix-10-12 left">
             <p class="margin-bottom-3" style="max-width: 100%;">
@@ -663,7 +723,7 @@
             <li class="col-4-12">
               <div class="fix-4-12 margin-bottom-3">
                 <div class="pad shadow  js-tilt" data-tilt-max="-4">
-                  <div class="fromBlur"><svg style="width:130px;height:130px; max-width: 100%;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#learn"></use></svg></div>
+                  <img src="assets/img/fixes/8.jpg" style="border-radius: 3px;">
                   <div class="ae-1 fromBlur"><p class="semiBold" style="color:black; font-size:0.7em;"><span class="center">Learn More</span></p></div>
 
                   
@@ -676,7 +736,7 @@
             <li class="col-4-12">
               <div class="fix-4-12  margin-bottom-3">
                 <div class="pad shadow js-tilt" data-tilt-max="-3">
-                  <div class="fromBlur"><svg style="width:130px;height:130px; max-width: 100%;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lessons"></use></svg></div>
+                  <img src="assets/img/fixes/9.jpg" style="border-radius: 3px;">
                  <div class="ae-2 fromBlur"><p class="semiBold" style="color:black; font-size:0.7em; "><span class="hghlght center">Lessons</span></p></div>
                    <span class="button play white button-76 crop hideForTablet">
                   <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
@@ -687,7 +747,7 @@
             <li class="col-4-12">
               <div class="fix-4-12 margin-bottom-3">
                 <div class="pad shadow  js-tilt" data-tilt-max="-4">
-                  <div class="fromBlur"><svg style="width:130px;height:130px; max-width: 100%;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cert"></use></svg></div>
+                  <img src="assets/img/fixes/10.jpg" style="border-radius: 3px;">
                   <div class="ae-3 fromBlur"><p class="semiBold" style="color:black; font-size:0.7em;"><span class="center">Certification</span></p></div>
                    <span class="button play white button-76 crop hideForTablet">
                   <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
@@ -701,11 +761,7 @@
       </div>
       
       <!-- SPLIT -->
-      <div class="wrap center" style="background: #F4F4F4">
-        
-        <img src="assets/img/yg1.png" />
-          
-      </div>
+      <div class="wrap" style="background-image:url('assets/img/fixes/7.jpg'); background-position: center;background-repeat: no-repeat; background-size: cover;"> <p style="height: 200px;"></p> </div>
       <!-- END SPLIT -->
       
     </div>
@@ -724,11 +780,11 @@
   });
 </script>
 
-<section class="slide autoHeight whiteSlide half-and-half" style="background: #F4F4F4"  data-title="Meet the Creator">
+<section class="slide autoHeight whiteSlide half-and-half" style="background: #f9f9fe;"  data-title="Meet the Creator">
   <div class="content">
     <div class="container">
      
-     <div class="wrap grey-background hideForDesktop">
+     <div class="wrap hideForDesktop">
       
         <div class="fix-10-12 left">
             <p class="margin-bottom-3" style="max-width: 100%;">
@@ -741,22 +797,15 @@
       </div>
      
      <!-- SPLIT -->
-      <div class="wrap center" style="background: #f9f9fe">
-        
-         <div class="marketing-support__figure marketing-support__figure--ashley">
-                                           
-			<div class="marketing-support__figure__inner">
-				<img class="marketing-support__figure__image" src="assets/img/levitate.png"/> 
-			</div>
-			<p style="padding: 80px 0px 0px 0px; letter-spacing: -0.04em;"> <div class="left Playfair italic bold"> Suzanne Jackson <br>
-			<p class="light" >Voice & Yoga Life Coach</p>
-			 </div> </p>
-		</div>
+      
+        <div class="full_half"> <img src="assets/img/fixes/11.jpg" />
+                    <p class="light uppercase padding-top-1 center"> Suzanne Jackson - VOICE & YOGA LIFE COACH </p>
+                </div>
           
-      </div>
+      
       <!-- END SPLIT -->
      
-      <div class="wrap grey-background hideForTablet">
+      <div class="wrap hideForTablet">
       
         <div class="fix-10-12 left">
             <p class="margin-bottom-3" style="max-width: 100%;">
