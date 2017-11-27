@@ -527,13 +527,13 @@ $(function(){
 				<section class="slide autoHeight whiteSlide half-and-half" style="background: #007aff"  data-title="Welcome to YogaSing">
 				  <div class="content">
 					<div class="container">
-					  <div class="wrap" style="background: #007aff">
+					  <div class="wrap" style="background: #7b272b">
 							<h4 class="ae-1 left typography-section-headline small-12  SFBlack" style="font-size: 3em; color:#f9f9fe;"> YogaSing </h4>
                    			 <p class="ae-1 left typography-intro large-10 small-12 SFBold" style="font-size: 1.3em; color:#efeff4;">Lessons are geared towards each individual--they are fluid beings, adapted to suit each student. YogaSing offers lessons with a full focus on vocal technique, a full focus on yoga, and a blend of the two. </p>
 					  </div>
 
 					  <!-- SPLIT -->
-					  <div class="wrap center" style="background: #ff2d55">
+					  <div class="wrap center" style="background:  #2a3a2f">
 
 						<h4 class="ae-1 left typography-section-headline small-12  SFBlack" style="font-size: 3em;color:#f9f9fe;"> Life Coaching </h4>
                    			 <p class="ae-1 left typography-intro large-10 small-12 SFBold" style="font-size: 1.3em;  color:#efeff4">Suzanne also offers Life Coaching, inspired by a desire to share yoga and vocal techniques that will bring strength, stability, and satisfaction in your journey. Once you find your true voice, it brings a different meaning and purpose to every aspect of your life. </p>
@@ -545,16 +545,16 @@ $(function(){
 				</section>
 		</main><!--/main-->
 
-<section class="slide fade whiteSlide kenBurns" name="contact" data-title="Get In Touch">
-			  <div class="content">
-				<div class="container">
-				  <div class="wrap">
+<section class="slide fade kenBurns" name="contact" data-title="Get In Touch">
+        <div class="content">
+        <div class="container">
+          <div class="wrap">
 
-					<h1 class="ae-1">Get In Touch!</h1>
-					<h2 class="ae-2"> Take a moment to fill out the form below and we will get in contact with you! </h2>
+          <h1 class="ae-1">Get In Touch!</h1>
+          <h2 class="ae-2"> Take a moment to fill out the form below and we will get in contact with you! </h2>
 
-			
-			<ul class="grid grid-81 fixedSpaces equal equalMobile">
+      
+      <ul class="grid grid-81 fixedSpaces equal equalMobile">
             <li class="col-6-12">
               
                  <div class="fix-7-12 margin-top-6 margin-bottom-4">
@@ -584,52 +584,52 @@ $(function(){
           </div>
         </div>
           <!-- 1) copy the code -->
-			<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-			<script type="text/javascript">
-				$( "#contact-form" ).validate({
-				  rules: {
-					postcode: {
-					  required: true,
-					  number: true
-					},
-					tel: {
-					  required: true,
-					  phone: true
-					}
-				  },
-				  messages: {
-						name: "Enter your name",
-						business: "Enter your business name",
-						tel: "Enter your phone number",
-						postcode: "Enter your postcode"
-				  }
-				});
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+      <script type="text/javascript">
+        $( "#contact-form" ).validate({
+          rules: {
+          postcode: {
+            required: true,
+            number: true
+          },
+          tel: {
+            required: true,
+            phone: true
+          }
+          },
+          messages: {
+            name: "Enter your name",
+            business: "Enter your business name",
+            tel: "Enter your phone number",
+            postcode: "Enter your postcode"
+          }
+        });
 
-				//validate phone number
-				$.validator.addMethod('phone', function(value, element) {
-					return this.optional(element) || (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''));
-				});
-			</script>
+        //validate phone number
+        $.validator.addMethod('phone', function(value, element) {
+          return this.optional(element) || (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''));
+        });
+      </script>
 
-			<!-- 2) copy styles of errors -->
-			<style>
-				form label.error { color: #F44336; margin:0;font-size: 14px;}
-				form input.error,form input.error:focus {box-shadow:0 0 0 1px #F44336 inset!important}
-				form input[name="tel"].wide { max-width:100%; }
-			</style>   
+      <!-- 2) copy styles of errors -->
+      <style>
+        form label.error { color: #F44336; margin:0;font-size: 14px;}
+        form input.error,form input.error:focus {box-shadow:0 0 0 1px #F44336 inset!important}
+        form input[name="tel"].wide { max-width:100%; }
+      </style>   
                   
             </li>
             
              <li class="col-6-12">
-              <div class="box-81 pad shadow table equalElement deepPurple ae-8 fromLeft margin-top-6 margin-bottom-4 js-tilt" data-tilt-max="-4">
+              <div class="box-81 pad shadow table equalElement ae-8 fromLeft margin-top-6 margin-bottom-4 js-tilt" data-tilt-max="-4" style="background-color:rgba(44, 62, 80, 0.75); ">
                 <div class="cell left">
                   <p class="light" style="color: cornsilk;" >Or you can reach me at: <br>
-						 <span class="hghlght">E-mail</span>:  <a href="mailto:yogasing@me.com">yogasing@me.com</a> <br>
-						<span class="hghlght">Phone Number</span>:  <a href="tel:3029936200">302-993-6200</a></p>
+             <span class="hghlght">E-mail</span>:  <a href="mailto:yogasing@me.com">yogasing@me.com</a> <br>
+            <span class="hghlght">Phone Number</span>:  <a href="tel:3029936200">302-993-6200</a></p>
                   <div class="author-81">
                      <div class="left Playfair italic bold" style="color: cornsilk;" > Suzanne Jackson <br>
-			<p class="light"  style="color: cornsilk;">Voice & Yoga Life Coach</p>
-			 </div> 
+      <p class="light"  style="color: cornsilk;">Voice & Yoga Life Coach</p>
+       </div> 
                   </div>
                 </div>
               </div>
@@ -637,7 +637,7 @@ $(function(){
             
             <li class="col-6-12">
               <h3 class="ae-4"> Be sure to subscribe &amp; receive updates! </h3>
-					<!-- Be sure you keep this form layout as it is. You can change the rest -->
+          <!-- Be sure you keep this form layout as it is. You can change the rest -->
             <form id="subscribe" class="ae-5">
               <input type="email" value="" name="subscribe-email" id="subscribe-email" placeholder="Your e-mail" class="input-38"/>
               <input type="submit" value="Get Updates" name="subscribe-submit" class="button pink"/>
@@ -647,40 +647,14 @@ $(function(){
             
            
           </ul>
-				  </div>
-				</div>
-			  </div>
-			  <div class="background" style="background-image:url(assets/img/img-42.jpg)"></div>
-			</section>
+          </div>
+        </div>
+        </div>
+        <div class="background" style="background-image:url(assets/img/sunflower.png)"></div>
+      </section>
+
 				
-			<nav class="panel bottom  small fixed customPanel black hideForPhone  opacity-8 ">
-        <div class="sections">
-            <div class="right">
-                <ul class="menu crop uppercase">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="sections compact hidden">
-            <div class="left">
-                <a href="https://www.yogasing.com" title="Brand Name">
-                    <svg style="width:107px;height:31px">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
-        </div>
-    </nav>
+			
 			<div class="loadingIcon">
         <svg class="loading-icon" id="loading-circle" viewBox="0 0 18 18">
             <circle class="circle" opacity=".1" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="9" cy="9" r="8" fill="none"></circle>
@@ -688,17 +662,6 @@ $(function(){
         </svg>
     </div>
 			<script src="js/main.built.js" type="text/javascript" charset="utf-8"></script>
-			<div class="dialogContainer bottom">
-        <div class="dialog" data-dialog-id="cookies" data-set-cookie="30">
-            <div class="close" data-dialog-action="hide"></div>
-            <div class="dialogContent"> <img width="50" class="avatar" src="https://lh6.ggpht.com/0O-HefMHNwemt4gnJ4YfNq3xFaTBaiFcwIRiUpzDZ1KObI8ptEMgoHOSDiy_tumRWexz=w300" alt="Cookie Icon">
-                <div class="text"> Our website uses cookies to personalize content and ads to make our site easier for you to use. </div>
-            </div>
-            <ul>
-                <li data-href="#" data-target="_blank" title="Datenschutz">More Info</li>
-                <li data-dialog-action="close" class="green">Got it!</li>
-            </ul>
-        </div>
-	</div>
+			
 </body>
 </html>
